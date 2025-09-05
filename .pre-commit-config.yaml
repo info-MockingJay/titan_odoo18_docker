@@ -1,0 +1,12 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.12.4  # Use latest version
+    hooks:
+      - id: ruff
+        name: Ruff Linter for Odoo
+        args: [ --fix, ]# Optional: auto-fix on dev machines
+        files: ^addons/
+
+      - id: ruff-format
+        name: Ruff Formatter
+        files: ^addons/
